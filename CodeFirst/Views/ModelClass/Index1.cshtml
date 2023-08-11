@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CodeFirst.Models.ModelClass>
+
+@{
+    ViewData["Title"] = "Index1";
+
+}
+
+    <div id="main">
+        <a class="btn btn-sm btn-success m-3" asp-controller="ModelClass" asp-action="Create1">Create</a>
+
+
+    
+        <br />
+        
+        @foreach (var item in Model)
+        {
+        
+            <ul id="list" class="ui-sortable">
+           
+            <li color="3"  class="colorBlue" rel="1" id="2">
+                    <span id="10listitem"style="width:100%" title="Double-click to edit...">@Html.DisplayFor(modelItem => item.Items)</span>
+
+           
+                <a class="draggertab tab" asp-controller="ModelClass" asp-action="Delete1" asp-route-Id="@item.Id"></a>
+            
+            
+                <div class="colortab tab"></div>
+                <a class="donetab tab" asp-controller="ModelClass" asp-action="Edit1" asp-route-Id="@item.Id"></a>
+
+                <a class="deletetab tab" asp-controller="ModelClass" asp-action="Delete1" asp-route-Id="@item.Id"></a>
+
+
+
+
+                
+            
+            </li>
+            </ul>
+        }
+
+       
+
+        <div class="clear"></div>
+    </div>
+

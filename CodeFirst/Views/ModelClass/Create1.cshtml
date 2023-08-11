@@ -1,0 +1,15 @@
+﻿@model CodeFirst.Models.ModelClass
+
+@{
+    ViewData["Title"] = "Create1";
+   
+}
+<h1>Create</h1>
+
+<form asp-action="Create1" id="add-new">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="text" asp-for="Items" id="new-list-item-text"  />
+    <span asp-validation-for="Items" class="text-danger"></span>
+    <input type="submit" id="add-new-submit" value="Create" class="button" />
+
+</form>
